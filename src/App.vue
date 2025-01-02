@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Wheel from './components/Wheel.vue'
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo">
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <Wheel :list="[{name: 'gift 1', color: 'red'}, {name: 'gift 2', color: 'blue'}, {name: 'gift 3', color: 'green'}]" />
 </template>
 
 <style scoped>
