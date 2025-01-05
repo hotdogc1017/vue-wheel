@@ -1,10 +1,11 @@
 {
-  "name": "wheel-vue",
+  "name": "wheel-spin-vue",
   "type": "module",
   "version": "0.0.5-beta.3",
   "author": "hotdogc1017",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
   },
   "scripts": {
     "dev": "vite",
