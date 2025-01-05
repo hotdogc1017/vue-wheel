@@ -7,14 +7,14 @@
 ## 安装
 
 ```bash
-npm install vue-wheel
+npm install wheel-spin-vue
 ```
 
 ## 使用方法
 
 ```vue
 <script setup lang="ts">
-import { Wheel } from 'vue-wheel'
+import { Wheel } from 'wheel-spin-vue'
 import { ref } from 'vue'
 
 const list = [

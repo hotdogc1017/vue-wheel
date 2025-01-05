@@ -7,14 +7,14 @@ A customizable wheel spinning component for Vue (>= 2.7.x).
 ## Installation
 
 ```bash
-npm install vue-wheel
+npm install wheel-spin-vue
 ```
 
 ## Usage
 
 ```vue
 <script setup lang="ts">
-import { Wheel } from 'vue-wheel'
+import { Wheel } from 'wheel-spin-vue'
 import { ref } from 'vue'
 
 const list = [
