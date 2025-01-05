@@ -20,7 +20,7 @@ const settings = ref({
 async function handleClick(type: 'normal' | 'mock') {
   const randomValue = Math.floor(Math.random() * list.length)
 
-  let name: string
+  let name: string = ''
   if (type === 'normal') {
     ({ name } = (await wheelRef.value?.spin(randomValue))!)
   }
