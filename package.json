@@ -1,8 +1,10 @@
 {
-  "name": "vue-wheel",
+  "name": "wheel-vue",
   "type": "module",
   "version": "0.0.4",
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
