@@ -1,7 +1,7 @@
 {
   "name": "wheel-spin-vue",
   "type": "module",
-  "version": "0.1.3-beta.3",
+  "version": "0.1.3-beta.4",
   "author": "hotdogc1017",
   "publishConfig": {
     "access": "public",
@@ -11,6 +11,7 @@
     "dev": "cd ./playground && npm run dev",
     "build": "cd ./wheel-spin-vue && npm run build",
     "pub:release": "cd ./wheel-spin-vue && npm run pub:release",
+    "pub:view": "cd ./wheel-spin-vue && npm pack --dry-run",
     "install:pub": "cd ./wheel-spin-vue && npm install",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
