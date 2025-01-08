@@ -24,7 +24,7 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
       
-      - name: 切换到包目录
+      - name: 切换到包所在目录
         run: ./wheel-spin-vue
 
       - name: 安装依赖
