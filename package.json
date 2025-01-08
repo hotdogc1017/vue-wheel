@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "cd ./playground && npm run dev",
     "build": "cd ./wheel-spin-vue && npm run build",
-    "publish": "cd ./wheel-spin-vue && npm run pub:release",
+    "pub:release": "cd ./wheel-spin-vue && npm run pub:release",
     "install:pub": "cd ./wheel-spin-vue && npm install",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

@@ -27,7 +27,7 @@
     "build:rs": "rsbuild build",
     "build:rd": "RSDOCTOR=true npm run build:rs",
     "build": "npm run build:vite",
-    "pub:release": "npm publish"
+    "pub:release": "npm publish --provenance"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.1.13",
