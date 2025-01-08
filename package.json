@@ -11,6 +11,7 @@
     "dev": "cd ./playground && npm run dev",
     "build": "cd ./wheel-spin-vue && npm run build",
     "publish": "cd ./wheel-spin-vue && npm run pub:release",
+    "install:pub": "cd ./wheel-spin-vue && npm install",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "clean": "rimraf dist node_modules **/node_modules",
