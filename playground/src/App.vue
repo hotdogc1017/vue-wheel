@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import Wheel from './components/Wheel.vue'
+import { onBeforeMount, ref } from 'vue'
+import Wheel from 'wheel-spin-vue'
+import 'wheel-spin-vue/style'
 
 const list = [
   { name: 'gift 1', color: 'red' },
@@ -37,6 +38,11 @@ async function mockRequest(value: number) {
     }, timeout.value)
   })
 }
+
+onBeforeMount(async () => {
+  console.log('fk')
+  console.log(await import('wheel-spin-vue'))
+})
 </script>
 
 <template>

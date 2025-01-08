@@ -2,7 +2,7 @@
 
 一个可自定义的 Vue (>= 2.7.x) 转盘组件。
 
-[English](./README.md)
+中文 | [English](./README.md)
 
 ## 安装
 
@@ -14,37 +14,41 @@ npm install wheel-spin-vue
 
 ```vue
 <script setup lang="ts">
-import { Wheel } from 'wheel-spin-vue'
 import { ref } from 'vue'
+import { Wheel } from 'wheel-spin-vue'
+import 'wheel-spin-vue/style' // 别忘记导入样式文件
 
 const list = [
-    { name: '项目 1' },
-    { name: '项目 2' },
-    { name: '项目 3' },
-    { name: '项目 4' },
+  { name: '项目 1' },
+  { name: '项目 2' },
+  { name: '项目 3' },
+  { name: '项目 4' },
 ]
 
 const wheelRef = ref()
 
-const spin = async () => {
-    try {
-        const result = await wheelRef.value.spin(Math.floor(Math.random() * list.length))
-        console.log('选中:', result)
-    } catch (error) {
-        console.error(error)
-    }
+async function spin() {
+  try {
+    const result = await wheelRef.value.spin(Math.floor(Math.random() * list.length))
+    console.log('选中:', result)
+  }
+  catch (error) {
+    console.error(error)
+  }
 }
 </script>
 
 <template>
-    <Wheel
-        ref="wheelRef"
-        :list="list"
-        @stop="() => console.log('停止旋转')"
-        @ok="(item) => console.log('选中项目:', item)"
-        @error="(err) => console.error('错误:', err)"
-    />
-    <button @click="spin">旋转</button>
+  <Wheel
+    ref="wheelRef"
+    :list="list"
+    @stop="() => console.log('停止旋转')"
+    @ok="(item) => console.log('选中项目:', item)"
+    @error="(err) => console.error('错误:', err)"
+  />
+  <button @click="spin">
+    旋转
+  </button>
 </template>
 ```
 
@@ -69,8 +73,8 @@ const spin = async () => {
 
 ```typescript
 interface Draw {
-    name: string
-    color?: string
+  name: string
+  color?: string
 }
 ```
 

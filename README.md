@@ -2,7 +2,7 @@
 
 A customizable wheel spinning component for Vue (>= 2.7.x).
 
-[中文文档](./README-ZH-CN.md)
+[中文](./README-zh-CN.md) | English
 
 ## Installation
 
@@ -14,37 +14,41 @@ npm install wheel-spin-vue
 
 ```vue
 <script setup lang="ts">
-import { Wheel } from 'wheel-spin-vue'
 import { ref } from 'vue'
+import { Wheel } from 'wheel-spin-vue'
+import 'wheel-spin-vue/style' // Don't forget to import style file
 
 const list = [
-    { name: 'Item 1' },
-    { name: 'Item 2' },
-    { name: 'Item 3' },
-    { name: 'Item 4' },
+  { name: 'Item 1' },
+  { name: 'Item 2' },
+  { name: 'Item 3' },
+  { name: 'Item 4' },
 ]
 
 const wheelRef = ref()
 
-const spin = async () => {
-    try {
-        const result = await wheelRef.value.spin(Math.floor(Math.random() * list.length))
-        console.log('Selected:', result)
-    } catch (error) {
-        console.error(error)
-    }
+async function spin() {
+  try {
+    const result = await wheelRef.value.spin(Math.floor(Math.random() * list.length))
+    console.log('Selected:', result)
+  }
+  catch (error) {
+    console.error(error)
+  }
 }
 </script>
 
 <template>
-    <Wheel
-        ref="wheelRef"
-        :list="list"
-        @stop="() => console.log('Spinning stopped')"
-        @ok="(item) => console.log('Selected item:', item)"
-        @error="(err) => console.error('Error:', err)"
-    />
-    <button @click="spin">Spin</button>
+  <Wheel
+    ref="wheelRef"
+    :list="list"
+    @stop="() => console.log('Spinning stopped')"
+    @ok="(item) => console.log('Selected item:', item)"
+    @error="(err) => console.error('Error:', err)"
+  />
+  <button @click="spin">
+    Spin
+  </button>
 </template>
 ```
 
@@ -69,8 +73,8 @@ const spin = async () => {
 
 ```typescript
 interface Draw {
-    name: string
-    color?: string
+  name: string
+  color?: string
 }
 ```
 
