@@ -3,6 +3,13 @@
   "type": "module",
   "version": "0.1.3-beta.7",
   "author": "hotdogc1017",
+  "homepage": "https://github.com/hotdogc1017/vue-wheel",
+  "repository": {
+    "url": "https://github.com/hotdogc1017/vue-wheel"
+  },
+  "bugs": {
+    "url": "https://github.com/hotdogc1017/vue-wheel/issues"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.com/"
@@ -19,7 +26,6 @@
     "./style": "./dist/index.css"
   },
   "files": [
-    "./LICENSE",
     "./dist"
   ],
   "scripts": {
@@ -27,7 +33,7 @@
     "build:rs": "rsbuild build",
     "build:rd": "RSDOCTOR=true npm run build:rs",
     "build": "npm run build:vite",
-    "pub:release": "npm publish --provenance"
+    "pub:release": "npm publish"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.1.13",
