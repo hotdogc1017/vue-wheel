@@ -1,7 +1,7 @@
 {
   "name": "wheel-spin-vue",
   "type": "module",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": "hotdogc1017",
   "publishConfig": {
     "access": "public",
