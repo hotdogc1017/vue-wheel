@@ -1,4 +1,4 @@
-name: Release
+name: Experiment Test
 
 permissions:
   contents: write
@@ -24,5 +24,5 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
       
-      - name: 打印路径以及列出目录结构
-        run: pwd | ls -R
+      - name: 切换到要发布的包所在目录并且打印发布的文件
+        run: cd ./wheel-spin-vue && npm pack --dry-run
