@@ -28,7 +28,7 @@ jobs:
         run: cd ./wheel-spin-vue
 
       - name: 安装依赖
-        run: npm run install
+        run: npm install
 
       - name: 运行构建
         run: npm run build
