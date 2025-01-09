@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.1.11",
   "author": "hotdogc1017",
+  "license": "MIT",
   "homepage": "https://github.com/hotdogc1017/vue-wheel",
   "repository": {
     "url": "git+https://github.com/hotdogc1017/vue-wheel.git"
