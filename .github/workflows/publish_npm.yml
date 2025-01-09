@@ -9,12 +9,14 @@ on:
       - 'v*.*.*'
 
 jobs:
-  release:
+  publish:
     runs-on: ubuntu-latest
 
     defaults:
       run:
         working-directory: "./wheel-spin-vue"
+    env: 
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
     steps:
       - name: 签出代码
         uses: actions/checkout@v4
@@ -35,5 +37,3 @@ jobs:
       
       - name: 发布到npm
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
